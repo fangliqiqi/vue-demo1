@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="app.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+	
+	<title>星巴克app首页练习</title>		
+</head>
+<body>
+	<!-- 头部文字 -->
+	<div id="header">
+		<p>{{coffee}}</p>
+	</div>
+	<!-- 头部轮播图 -->
+	<div id="banna">
+		<ul>
+			<li v-for="img in imgs">
+				<img :src="img.src" >
+			</li>
+		</ul>	
+	</div>
+	<!-- 卡片 -->
+	<ul id="ul1">
+		<li li v-for='img in imgs'>
+			<img :src="img.src" alt="">
+		</li>
+	</ul>
+	<!-- 星享俱乐部	 -->
+	<div id='star'>
+		<h5>{{julebu}}</h5>
+		<p class='p1'>{{neirong}}<span>{{gengduo}}</span></p>
+		<p class="p2">
+			<a href="" v-for='a in as'>{{a}}</a>
+		</p>
+		<div>
+			<img :src="imgsrc" alt="">
+		</div>
+	</div>
+	<!-- 星巴克精选 -->
+	<div id="selected">
+		<h5>{{h5}}</h5>
+		<p>{{p}}</p>
+		<ul>
+			<li v-for='list in lists'>
+				<img :src="list.src" alt="">
+				<h6>{{list.h6}}</h6>
+				<p>{{list.p1}} <br> {{list.p2}} </p>
+				<a href="">{{list.a}}</a>
+			</li>
+		</ul>
+	</div>
+	<!-- 咖啡文化 -->
+	<div id="culture" >
+		<h5>{{h5}}</h5>
+		<p>{{p}}</p>
+		<div class="scroll">
+			<ul>
+				<li v-for='list in lists'>
+					<div :class='list.url'></div>
+					<p>{{list.p}}</p>
+					<span>{{list.span}}</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 尾部 -->
+	<div id="footer">
+		<ul>
+			<li v-for='list in lists'>
+				<img :src="list.src" alt="">
+				<span>{{list.span}}</span>
+			</li>
+		</ul>
+	</div>
+	
+	
+</body>
+</html>
